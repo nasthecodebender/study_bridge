@@ -1,0 +1,88 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9e8; 
+    background-image: url('https://hulunem.com/wp-content/uploads/2024/11/ET_Addis_asv2018-01_img13_University_gate.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #21287c; 
+    max-width: 600px;
+    margin: 40px auto; 
+    padding: 20px;
+    line-height: 1.6;
+}
+header {
+    background-color: #fff7c7;
+    border-bottom: 1px solid #a3c6f5;
+}
+
+nav {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1b1769;
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #64748b;
+    font-weight: 500;
+    font-size: 1.25rem;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #081056;
+}
+
+.btn-signup {
+    background-color: #111d5f;
+    color: #092b66 ;
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.btn-signup:hover {
+    background-color: #225786;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 50%; 
+    box-sizing: border-box; 
+    padding: 14px 16px; 
+    font-size: 15px;
+    color: #132a4a; 
+    background-color: #f7fcc6;
+    border: 1px solid #cbd5e1; 
+    border-radius: 6px; 
+    transition: all 0.2s ease-in-out; 
+}
+
+input::placeholder {
+    color: #94a3b8; 
+    font-weight: 400;
+}
+
+input:focus {
+    border-color: #0a192f; 
+    background-color: #f8fafc; 
+    outline: none; 
+}

@@ -122,6 +122,17 @@ nav {
     font-weight: bold;
 }
 
+}
+
+.btn-accent {
+    background-color: #fafea6;
+    color: #383198;
+}
+
+.btn-accent:hover {
+    background-color: #f1f5f9;
+    transform: translateY(-1px);
+}
 
 /* Container & Sections */
 .container {
@@ -239,4 +250,3 @@ footer p {
         text-align: center;
     }
 }
-

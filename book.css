@@ -297,3 +297,23 @@ nav {
     max-width: 400px;
     margin: 0 auto;
 }
+/* Footer */
+footer {
+    border-top: 1px solid #e2e8f0;
+    background-color: #090639;
+    padding: 2.5rem 1.5rem;
+}
+
+.footer-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin: 0;
+}

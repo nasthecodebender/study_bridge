@@ -111,31 +111,17 @@ nav {
     text-shadow: 0 1px 5px rgba(231, 201, 33, 0.1);
 }
 
-/* Glassmorphic Secondary Button */
-.btn-secondary {
-    background-color: rgba(255, 248, 144, 0.1);
-    color: #f9e46c;
-    border: 1px solid rgba(250, 233, 143, 0.25);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+.btn {
+    display: inline-block;
+    background-color: #f7d774;
+    color: #000000;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.btn-secondary:hover {
-    background-color: rgba(255, 249, 168, 0.2);
-    color: #ffffff;
-    border-color: rgba(255, 252, 179, 0.45);
-    transform: translateY(-1px);
-}
-
-.btn-accent {
-    background-color: #fafea6;
-    color: #383198;
-}
-
-.btn-accent:hover {
-    background-color: #f1f5f9;
-    transform: translateY(-1px);
-}
 
 /* Container & Sections */
 .container {
@@ -253,3 +239,4 @@ footer p {
         text-align: center;
     }
 }
+

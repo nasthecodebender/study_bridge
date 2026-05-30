@@ -1,6 +1,11 @@
 body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     background-color: #feffdb;
+    background-image: url(../DSC01394-scaled-350x232.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     color: #1d1970;
     margin: 0;
     padding: 0;
@@ -8,9 +13,8 @@ body {
 }
 
 header {
-    background-color: #fcffd1;
-    border-bottom: 1px solid #0c213c;
-    
+    background-color: #fff7c7;
+    border-bottom: 1px solid #a3c6f5;
 }
 
 nav {

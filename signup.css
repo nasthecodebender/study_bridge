@@ -1,12 +1,10 @@
- body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9e8;
-    min-height: 100vh;
-    color: #21287c; 
-    max-width: 600px;
-    margin: 40px auto; 
-    padding: 20px;
-    line-height: 1.6;
+body {
+     font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #feffdb;
+    color: #eef070;
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
 }
 header {
     background-color: #fff7c7;
@@ -102,4 +100,24 @@ input:focus {
     color: white;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+/* Footer */
+footer {
+    border-top: 1px solid #e2e8f0;
+    background-color: #090639;
+    padding: 2.5rem 1.5rem;
+}
+
+.footer-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin: 0;
 }

@@ -1,12 +1,7 @@
 body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     background-color: #feffdb;
-    background-image: url(file:///Users/jess/Desktop/assignement%20/7C9BC8A1-F78A-464B-9F97-E25856854804.JPG);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    color: #fcffb3;
+    color: #fdffb5;
     margin: 0;
     padding: 0;
     line-height: 1.7;
@@ -45,15 +40,15 @@ input[type="password"] {
     box-sizing: border-box; 
     padding: 14px 16px; 
     font-size: 17px;
-    color: #132a4a; 
+    color: #0c2b56; 
     background-color: #ffffff;
-    border: 1px solid #cbd5e1; 
+    border: 1px solid #0b1c32; 
     border-radius: 6px; 
     transition: all 0.2s ease-in-out; 
 }
 
 input::placeholder {
-    color: #07172c; 
+    color: #12243e; 
     font-weight: 500;
 }
 
@@ -61,4 +56,24 @@ input:focus {
     border-color: #0a192f; 
     background-color: #f8fafc; 
     outline: none; 
+}
+.login-btn {
+    background-color: #1e3a5f;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #225786;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.login-btn:active {
+    transform: translateY(0);
 }

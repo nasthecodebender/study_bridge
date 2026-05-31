@@ -193,6 +193,73 @@ nav {
     font-weight: bold;
     margin-bottom: 1.5rem;
 }
+/* Floating Emoji Button */
+#chatButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 65px;
+    height: 65px;
+    background: #0e2358;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 9999;
+}
+
+/* Chat Window */
+#chatWindow {
+    position: fixed;
+    bottom: 95px;
+    right: 20px;
+    width: 320px;
+    height: 420px;
+    background: rgb(14, 29, 89);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.chat-header {
+    background: rgb(247, 253, 170);
+    color: rgb(31, 51, 97);
+    padding: 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+#chatMessages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.chat-input {
+    display: flex;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-top: 1px solid #15275e;
+}
+
+.chat-input button {
+    width: 60px;
+    border: none;
+    background: #0e245a;
+    color: rgb(255, 255, 163);
+    cursor: pointer;
+}
 /* Footer */
 footer {
     border-top: 1px solid #e2e8f0;

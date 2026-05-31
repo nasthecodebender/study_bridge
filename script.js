@@ -1,4 +1,4 @@
-const API_KEY = "PASTE_YOUR_GEMINI_API_KEY_HERE";
+const API_KEY = "AQ.Ab8RN6Khm2huqkrIwOeo0pdFdkmwPv31ZIar4hOtYHECegNnwg";
 
 
 function toggleChat() {

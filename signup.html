@@ -18,7 +18,7 @@ body{
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="signup.css">
 </head>
 <body>
 
@@ -29,7 +29,7 @@ body{
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="books.html">Books</a>
-                <a href="about.html" class="active">About Us</a>
+                <a href="about.html">About Us</a>
                 <a href="contact.html">Contact Us</a>
                 <a href="login.html">Login</a>
                 <a href="signup.html" class="btn-signup">Signup</a>
@@ -40,20 +40,13 @@ body{
 
   <form align="center">
 <h1><p><b><i>Join Study Bridge and use studying materials freely!</i></b></p></h1>
-   <label><b><i>Email:</i></b></label><br>
-<input type="email" id="email" placeholder="Enter email"><br><br>
+    <label><b><i>Email:</i></b></label><br>
+    <input type="email" placeholder="Enter email"><br><br>
 
-<label><b><i>Password:</i></b></label><br>
-<input type="password" id="password" placeholder="Enter password"><br><br>
+    <label><b><i>Password:</i></b></label><br>
+    <input type="password" placeholder="Enter password"><br><br>
 
-<input type="checkbox" id="showPassword">
-<label for="showPassword">Show Password</label><br><br>
-
-<button type="button" class="signup-bt" onclick="signupUser()">
-    Sign Up
-</button>
-
-<p id="message"></p>
+  <button type="button" class="signup-bt">Sign Up</button>
     <p align="center">
       <a href="login.html">Have an account already? Login</a>
     </p>
@@ -64,7 +57,7 @@ body{
             <p>&copy; 2026 StudyBridge. Built with passion by high schoolers for students.</p>
         </div>
     </footer>
-<script src="signup.js"></script>
+
 </body>
 </html>
 

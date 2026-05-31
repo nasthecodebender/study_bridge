@@ -41,6 +41,34 @@
             </div>
         </div>
     </section>
+    <!-- Floating AI Chat Button -->
+<div id="chatButton" onclick="toggleChat()">
+    🤖
+</div>
+
+<!-- Chat Window -->
+<div id="chatWindow">
+    <div class="chat-header">
+        AI Assistant
+        <span onclick="toggleChat()">✖</span>
+    </div>
+
+    <div id="chatMessages">
+        <p>Hello! 👋 How can I help you?</p>
+    </div>
+
+   <div class="chat-input">
+    <input
+        type="text"
+        id="userInput"
+        placeholder="Ask me anything..."
+    >
+
+    <button onclick="sendMessage()">➤</button>
+</div>
+</div>
+   <script src="script.js"></script>
+    
 
     <!-- Footer -->
     <footer>
@@ -52,5 +80,6 @@
             </div>
         </div>
     </footer>
-    </body>
+
+</body>
 </html>

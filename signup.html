@@ -1,19 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<style>
-body{
-    background-image: url("https://dandiiboru.net/wp-content/uploads/2023/12/DSC01394-scaled-350x232.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
-}
-</style>
-   <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudyBridge: Signup</title>
-    <!-- Modern & Clean Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -21,57 +11,59 @@ body{
     <link rel="stylesheet" href="signup.css">
 </head>
 <body>
-<script src="signup.html"></script>
-    <!-- Header Navigation -->
     <header>
         <nav>
-                        <a href="index.html" class="logo">StudyBridge</a>
-            <div class="nav-links">
+            <a href="index.html" class="logo">StudyBridge</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+            <div class="nav-links" id="navLinks">
                 <a href="index.html">Home</a>
                 <a href="books.html">Books</a>
                 <a href="about.html">About Us</a>
                 <a href="contact.html">Contact Us</a>
                 <a href="login.html">Login</a>
-                <a href="signup.html" class="btn-signup">Signup</a>
-
+                <a href="signup.html" class="btn-signup active">Signup</a>
             </div>
         </nav>
     </header>
 
-  <form align="center">
-<h1><p><b><i>Join Study Bridge and use studying materials freely!</i></b></p></h1>
-    <label><b><i>Email:</i></b></label><br>
-    <input type="email" placeholder="Enter email"><br><br>
+    <main class="signup-main">
+        <div class="signup-card">
+            <h1>Join StudyBridge</h1>
+            <p class="subtitle">Use studying materials freely!</p>
 
-    <label><b><i>Password:</i></b></label><br>
-    <input type="password" placeholder="Enter password"><br><br>
+            <form id="signupForm" novalidate>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
 
-  <button type="button" class="signup-bt">Sign Up</button>
-    <p align="center">
-      <a href="login.html">Have an account already? Login</a>
-    </p>
-  </form><br><br><br><br><br><br><br><br>
-  <!-- Footer -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Create a password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" placeholder="Repeat your password" required>
+                </div>
+
+                <p id="statusMessage" class="status-message" aria-live="polite"></p>
+
+                <button type="submit" class="signup-bt">Sign Up</button>
+
+                <p class="login-link">
+                    <a href="login.html">Already have an account? Login</a>
+                </p>
+            </form>
+        </div>
+    </main>
+
     <footer>
         <div class="footer-container">
             <p>&copy; 2026 StudyBridge. Built with passion by high schoolers for students.</p>
         </div>
     </footer>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6a1dc576f961bc1c2ff574fc/1jq24mmll';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+
+    <script src="signup.js"></script>
 </body>
 </html>
-
-
-   

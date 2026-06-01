@@ -1,72 +1,54 @@
-function signupUser() {
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value.trim();
-    const message = document.getElementById("message");
-
-    message.style.color = "red";
-
-    // Empty fields check
-    if (email === "" || password === "") {
-        message.textContent = "Please fill in all fields.";
-        return;
+function initSignup() {
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle && navLinks) {
+        navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
     }
 
-    // Email validation
-    const emailPattern =
-        /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const form = document.getElementById('signupForm');
+    const statusMessage = document.getElementById('statusMessage');
 
-    if (!emailPattern.test(email)) {
-        message.textContent = "Please enter a valid email address.";
-        return;
-    }
+    if (!form) return;
 
-    // Password strength
-    const strongPassword =
-        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
 
-    if (!strongPassword.test(password)) {
-        message.textContent =
-            "Password must contain uppercase, lowercase, number and be at least 8 characters.";
-        return;
-    }
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirmPassword').value;
 
-    // Get existing users
-    let users = JSON.parse(localStorage.getItem("studybridgeUsers")) || [];
+        // Reset
+        statusMessage.style.color = '#c62828';
+        statusMessage.textContent = '';
 
-    // Check duplicate email
-    const exists = users.find(user => user.email === email);
+        // Validation
+        if (!email || !email.includes('@')) {
+            statusMessage.textContent = 'Please enter a valid email address.';
+            return;
+        }
+        if (password.length < 6) {
+            statusMessage.textContent = 'Password must be at least 6 characters.';
+            return;
+        }
+        if (password !== confirmPassword) {
+            statusMessage.textContent = 'Passwords do not match.';
+            document.getElementById('confirmPassword').value = '';
+            document.getElementById('confirmPassword').focus();
+            return;
+        }
 
-    if (exists) {
-        message.textContent =
-            "This email is already registered.";
-        return;
-    }
+        // Success
+        statusMessage.style.color = '#2e7d32';
+        statusMessage.textContent = 'Login successful! Redirecting...';
 
-    // Save user
-    users.push({
-        email: email,
-        password: password
+        setTimeout(() => {
+            window.location.href = 'index.html';
+        }, 1200);
     });
-
-    localStorage.setItem(
-        "studybridgeUsers",
-        JSON.stringify(users)
-    );
-
-    message.style.color = "green";
-    message.textContent =
-        "Account created successfully! Redirecting...";
-
-    setTimeout(() => {
-        window.location.href = "login.html";
-    }, 2000);
 }
-document.getElementById("showPassword")
-.addEventListener("change", function () {
 
-    const password =
-        document.getElementById("password");
-
-    password.type =
-        this.checked ? "text" : "password";
-});
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSignup);
+} else {
+    initSignup();
+}

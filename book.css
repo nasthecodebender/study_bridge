@@ -142,40 +142,7 @@ nav {
     padding: 1rem 1.5rem;
 }
 
-.filter-tabs {
-    display: flex;
-    gap: 0.5rem;
-    overflow-x: auto;
-    padding-bottom: 2px;
-}
-
-.filter-tab {
-    background: none;
-    border: 1px solid transparent;
-    outline: none;
-    font-family: inherit;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #132093;
-    padding: 0.5rem 1.25rem;
-    border-radius: 8px;
-    cursor: pointer;
-    white-space: nowrap;
-    transition: all 0.2s ease;
-}
-
-.filter-tab:hover {
-    color: #130e6a;
-    background-color: #f1f5f9;
-}
-
-.filter-tab.active {
-    background-color: #131055;
-    color: #ffffff;
-    border-color: #131055;
-}
-
-
+ 
 .container {
     max-width: 950px;
     margin: 4rem auto;

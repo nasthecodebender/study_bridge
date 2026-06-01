@@ -53,14 +53,14 @@ nav {
     font-weight: 700;
     color: #141149;
     text-decoration: none;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
 }
 
 
 .nav-links {
    display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .nav-links a {

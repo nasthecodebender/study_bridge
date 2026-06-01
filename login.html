@@ -1,19 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-body{
-    background-image: url("https://dandiiboru.net/wp-content/uploads/2023/12/DSC01394-scaled-350x232.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
-}
-</style>
-   <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StudyBridge: Books & Resources</title>
-    <!-- Modern & Clean Font -->
+    <title>StudyBridge: Login</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -21,55 +11,54 @@ body{
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
-<script src="login.js" ></script>
-    <!-- Header Navigation -->
-   <header>
+    <header>
         <nav>
-                         <a href="index.html" class="logo">StudyBridge</a>
-            <div class="nav-links">
+            <a href="index.html" class="logo">StudyBridge</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+            <div class="nav-links" id="navLinks">
                 <a href="index.html">Home</a>
                 <a href="books.html">Books</a>
                 <a href="about.html">About Us</a>
                 <a href="contact.html">Contact Us</a>
-                <a href="login.html"class="active">Login</a>
+                <a href="login.html" class="active">Login</a>
                 <a href="signup.html" class="btn-signup">Signup</a>
-
             </div>
         </nav>
     </header>
 
-  <form align="center">
-<h1><p><b><i>Welcome Back!</i></b></p></h1>
-<h3><p><i>Get back to where you left!</i></p></h3><br>
-    <label><b><i>Email:</i></b></label><br>
-    <input type="email" placeholder="Enter email"><br><br>
+    <main class="login-main">
+        <div class="login-card">
+            <h1>Welcome Back!</h1>
+            <p class="subtitle">Get back to where you left!</p>
 
-    <label><b><i>Password:</i></b></label><br>
-    <input type="password" placeholder="Enter password"><br><br>
+            <form id="loginForm" novalidate>
+                <div class="form-group">
+                    <label for="username">Username / Email</label>
+                    <input type="text" id="username" placeholder="Enter username or email" required>
+                </div>
 
-    <button type="submit" class="login-btn">Login</button>
-    <p align="center">
-      <a href="signup.html">Don't have an account? Signup</a>
-    </p>
-  </form><br><br><br><br>
-  <!-- Footer -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter password" required>
+                </div>
+
+                <p id="errorMessage" class="error-message" aria-live="polite"></p>
+
+                <button type="submit" class="login-btn">Login</button>
+
+                <p class="signup-link">
+                    <a href="signup.html">Don't have an account? Sign up</a>
+                </p>
+            </form>
+        </div>
+    </main>
+
     <footer>
         <div class="footer-container">
             <p>&copy; 2026 StudyBridge. Built with passion by high schoolers for students.</p>
         </div>
     </footer>
-    <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6a1dc576f961bc1c2ff574fc/1jq24mmll';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+
+    <script src="login.js"></script>
 </body>
 </html>

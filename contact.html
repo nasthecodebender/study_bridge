@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudyBridge: Contact Us</title>
-    <!-- Modern & Clean Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -12,61 +11,54 @@
 </head>
 <body>
 
-    <!-- Header Navigation -->
     <header>
         <nav>
             <a href="index.html" class="logo">StudyBridge</a>
-            <div class="nav-links">
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+            <div class="nav-links" id="navLinks">
                 <a href="index.html">Home</a>
                 <a href="books.html">Books</a>
-                <a href="about.html" >About Us</a>
+                <a href="about.html">About Us</a>
                 <a href="contact.html" class="active">Contact Us</a>
                 <a href="login.html">Login</a>
                 <a href="signup.html" class="btn-signup">Signup</a>
-
             </div>
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main class="container">
         <h1>Contact Us</h1>
         <p class="tagline">CANDIDATE HELPLINE</p>
-        
+
         <div class="about-card">
-            <p>
-                Reach Our Scholarly Office. Have queries regarding Past national Exam guides, syllabus chapters, or peer tutoring timings? Send us a ticket.</p>
-                <p>Email: studybridge@gmail.com</p>
-               <p>Phone Number: +251 912 324 567</p>
-        <form align="center">
-    <label><b><i>Candidates Email:</i></b></label><br>
-    <input type="email" placeholder="Enter email"><br><br>
+            <p>Reach Our Scholarly Office. Have queries regarding Past national Exam guides, syllabus chapters, or peer tutoring timings? Send us a ticket.</p>
+            <p>Email: studybridge@gmail.com</p>
+            <p>Phone Number: +251 912 324 567</p>
 
-    <label><b><i>Write your feedback:</i></b></label><br>
-    <input type="Description..." placeholder="Description..."><br><br>
+            <form id="contactForm" novalidate>
+                <div class="form-group">
+                    <label for="email"><b><i>Candidate's Email:</i></b></label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
 
-  <button type="button" class="send-btn">Send</button>
-  </form></div><br><br>
+                <div class="form-group">
+                    <label for="description"><b><i>Write your feedback:</i></b></label>
+                    <textarea id="description" placeholder="Description..." rows="4" required></textarea>
+                </div>
+
+                <p id="statusMessage" class="status-message" aria-live="polite"></p>
+
+                <button type="submit" class="send-btn">Send</button>
+            </form>
+        </div>
     </main>
 
-<!-- Footer -->
     <footer>
         <div class="footer-container">
             <p>&copy; 2026 StudyBridge. Built with passion by high schoolers for students.</p>
         </div>
     </footer>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6a1dc576f961bc1c2ff574fc/1jq24mmll';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+
+    <script src="contact.js"></script>
 </body>
 </html>

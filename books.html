@@ -16,10 +16,11 @@
     <header>
         <nav>
                         <a href="index.html" class="logo">StudyBridge</a>
-            <div class="nav-links">
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+            <div class="nav-links" id="navLinks">
                 <a href="index.html">Home</a>
                 <a href="books.html" class="active">Books</a>
-                <a href="about.html">About Us</a>
+                <a href="about.html" >About Us</a>
                 <a href="contact.html">Contact Us</a>
                 <a href="login.html">Login</a>
                 <a href="signup.html" class="btn-signup">Signup</a>
@@ -36,13 +37,22 @@
             
             <div class="search-container">
                 <div class="search-box">
-                    <input type="text" id="bookSearch" placeholder="Search by book title or subject..." onkeyup="filterBooks()">
+                    <input type="text" id="bookSearch" placeholder="Search by book title or subject...">
                 </div>
             </div>
         </div>
     </section>
 
-    
+    <div class="filter-wrapper">
+        <div class="filter-tabs">
+            <button class="filter-tab active" onclick="setGradeFilter('all')">All Grades</button>
+            <button class="filter-tab" onclick="setGradeFilter('9')">Grade 9</button>
+            <button class="filter-tab" onclick="setGradeFilter('10')">Grade 10</button>
+            <button class="filter-tab" onclick="setGradeFilter('11')">Grade 11</button>
+            <button class="filter-tab" onclick="setGradeFilter('12')">Grade 12</button>
+        </div>
+    </div>
+
     <!-- Book Grid Section -->
     <main class="container">
         <!-- Grid of Books -->
@@ -428,18 +438,7 @@
             <p>&copy; 2026 StudyBridge. Built with passion by high schoolers for students.</p>
         </div>
     </footer>
-        <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6a1dc576f961bc1c2ff574fc/1jq24mmll';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
- </body>
+        
+     <script src="books.js"></script>
+</body>
  </html>

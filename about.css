@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #6366f1; 
+    --primary-hover: #191561;
+    --accent-color: #38bdf8;  
+    --text-main: #f8fafc;     
+    --text-muted: #94a3b8;    
+    --bg-overlay: rgba(15, 23, 42, 0.85); 
+    --glass-bg: rgba(255, 255, 255, 0.06);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    background-image: linear-gradient(var(--bg-overlay), var(--bg-overlay)), url('https://www.bing.com/th/id/OIP.ZfBpxWqeRJ48hsfw-2fktAHaDx?w=293&h=178&c=7&r=0&o=7&cb=thfvnextfalcon&dpr=2&pid=1.7&rm=3&r=0');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+}
+
+
+header {
+   background-color: #f8ffba;
+    border-bottom: 1px solid #060d16;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #141149;
+    text-decoration: none;
+    letter-spacing: -0.03em;
+}
+
+
+.nav-links {
+   display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #081f3f;
+    font-weight: 500;
+    font-size: 1.25rem;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #225786;
+}
+
+
+.btn-signup {
+    background-color: #7b85bb;
+    color: #092b66 ;
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.btn-signup:hover {
+    background-color: #0c073e;
+}
+
+
+.container {
+    flex: 1;
+    max-width: 800px;
+    width: 100%;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    letter-spacing: -1px;
+    background: linear-gradient(135deg, #fafca5 30%, #fafca5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #fafca5;
+    margin-bottom: 3rem;
+    font-weight: 400;
+    max-width: 600px;
+}
+
+
+.about-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 3rem 2.5rem;
+    box-shadow: var(--glass-shadow);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+}
+
+.about-card p {
+    font-size: 1.1rem;
+    color: #dee1cb; 
+    line-height: 1.8;
+}
+
+
+.highlight {
+    color: #f9f3f3;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+    padding: 0 4px;
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background-color: rgba(99, 102, 241, 0.35); 
+    z-index: -1;
+    border-radius: 2px;
+    transition: height 0.2s ease;
+}
+
+.about-card p:hover .highlight::after {
+    height: 100%;
+    background-color: rgba(99, 102, 241, 0.5);
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 1.5rem 1rem;
+    }
+
+    .nav-links {
+        gap: 1.25rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container {
+        margin: 2rem auto;
+    }
+
+    h1 {
+        font-size: 2.25rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .about-card {
+        padding: 2rem 1.5rem;
+        gap: 1.25rem;
+    }
+
+    .about-card p {
+        font-size: 1rem;
+    }
+}
+/* Footer */
+footer {
+    border-top: 1px solid #e2e8f0;
+    background-color: #090639;
+    padding: 2.5rem 1.5rem;
+}
+
+.footer-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin: 0;
+}
+

@@ -1,46 +1,33 @@
-const VALID_USERNAME = 'admin';
-const VALID_PASSWORD = '123456';
+document.addEventListener("DOMContentLoaded", function() {
+    const loginForm = document.getElementById("loginForm");
+    const errorMessage = document.getElementById("errorMessage");
 
-function initLogin() {
-    // Hamburger nav toggle
-    const navToggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
-    if (navToggle && navLinks) {
-        navToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('open');
-        });
-    }
+    loginForm.addEventListener("submit", function(e) {
+        e.preventDefault();
 
-    // Login form handler
-    const loginForm = document.getElementById('loginForm');
-    const errorMessage = document.getElementById('errorMessage');
+        const username = document.getElementById("username").value.trim();
+        const password = document.getElementById("password").value.trim();
 
-    if (loginForm) {
-        loginForm.addEventListener('submit', function (e) {
-            e.preventDefault();
+        // Simple validation
+        if (!username || !password) {
+            errorMessage.textContent = "Please fill in all fields.";
+            errorMessage.style.color = "#ef4444";
+            return;
+        }
 
-            const username = document.getElementById('username').value.trim();
-            const password = document.getElementById('password').value;
+        if (password.length < 6) {
+            errorMessage.textContent = "Password must be at least 6 characters.";
+            errorMessage.style.color = "#ef4444";
+            return;
+        }
 
-            if (username === VALID_USERNAME && password === VALID_PASSWORD) {
-                errorMessage.style.color = '#2e7d32';
-                errorMessage.textContent = 'Login successful! Redirecting...';
-                setTimeout(() => {
-                    window.location.href = 'index.html';
-                }, 1000);
-            } else {
-                errorMessage.style.color = '#c62828';
-                errorMessage.textContent = 'Invalid username or password.';
-                document.getElementById('password').value = '';
-                document.getElementById('password').focus();
-            }
-        });
-    }
-}
+        // Simulate successful login
+        errorMessage.textContent = "Login successful! Redirecting...";
+        errorMessage.style.color = "#22c55e";
 
-// Works whether the script is in <head> or end of <body>
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initLogin);
-} else {
-    initLogin();
-}
+        // Redirect to books.html after short delay
+        setTimeout(function() {
+            window.location.href = "books.html";
+        }, 800);
+    });
+});

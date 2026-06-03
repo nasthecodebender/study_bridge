@@ -1,54 +1,47 @@
-function initSignup() {
-    const navToggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
-    if (navToggle && navLinks) {
-        navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-    }
+document.addEventListener("DOMContentLoaded", function() {
+    const signupForm = document.getElementById("signupForm");
+    const statusMessage = document.getElementById("statusMessage");
 
-    const form = document.getElementById('signupForm');
-    const statusMessage = document.getElementById('statusMessage');
-
-    if (!form) return;
-
-    form.addEventListener('submit', function (e) {
+    signupForm.addEventListener("submit", function(e) {
         e.preventDefault();
 
-        const email = document.getElementById('email').value.trim();
-        const password = document.getElementById('password').value;
-        const confirmPassword = document.getElementById('confirmPassword').value;
-
-        // Reset
-        statusMessage.style.color = '#c62828';
-        statusMessage.textContent = '';
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
+        const confirmPassword = document.getElementById("confirmPassword").value.trim();
 
         // Validation
-        if (!email || !email.includes('@')) {
-            statusMessage.textContent = 'Please enter a valid email address.';
+        if (!email || !password || !confirmPassword) {
+            statusMessage.textContent = "Please fill in all fields.";
+            statusMessage.style.color = "#ef4444";
             return;
         }
+
+        // Basic email validation
+        if (!email.includes("@") || !email.includes(".")) {
+            statusMessage.textContent = "Please enter a valid email address.";
+            statusMessage.style.color = "#ef4444";
+            return;
+        }
+
         if (password.length < 6) {
-            statusMessage.textContent = 'Password must be at least 6 characters.';
+            statusMessage.textContent = "Password must be at least 6 characters.";
+            statusMessage.style.color = "#ef4444";
             return;
         }
+
         if (password !== confirmPassword) {
-            statusMessage.textContent = 'Passwords do not match.';
-            document.getElementById('confirmPassword').value = '';
-            document.getElementById('confirmPassword').focus();
+            statusMessage.textContent = "Passwords do not match.";
+            statusMessage.style.color = "#ef4444";
             return;
         }
 
-        // Success
-        statusMessage.style.color = '#2e7d32';
-        statusMessage.textContent = 'Login successful! Redirecting...';
+        // Simulate successful signup
+        statusMessage.textContent = "Account created successfully! Redirecting...";
+        statusMessage.style.color = "#22c55e";
 
-        setTimeout(() => {
-            window.location.href = 'index.html';
-        }, 1200);
+        // Redirect to index.html after short delay
+        setTimeout(function() {
+            window.location.href = "index.html";
+        }, 800);
     });
-}
-
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initSignup);
-} else {
-    initSignup();
-}
+});
